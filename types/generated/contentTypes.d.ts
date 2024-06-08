@@ -380,7 +380,12 @@ export interface ApiContactContact extends Schema.CollectionType {
         minLength: 2;
         maxLength: 20;
       }>;
-    Email: Attribute.Email;
+    Email: Attribute.Email & Attribute.Required;
+    Message: Attribute.Text &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 2;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
