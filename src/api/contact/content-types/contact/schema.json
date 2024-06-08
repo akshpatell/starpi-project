@@ -26,6 +26,11 @@
       "type": "text",
       "required": true,
       "minLength": 2
+    },
+    "Number": {
+      "type": "biginteger",
+      "required": true,
+      "max": "10"
     }
   }
 }

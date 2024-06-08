@@ -386,6 +386,14 @@ export interface ApiContactContact extends Schema.CollectionType {
       Attribute.SetMinMaxLength<{
         minLength: 2;
       }>;
+    Number: Attribute.BigInteger &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          max: '10';
+        },
+        string
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
