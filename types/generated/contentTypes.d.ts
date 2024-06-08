@@ -368,17 +368,19 @@ export interface ApiContactContact extends Schema.CollectionType {
     singularName: 'contact';
     pluralName: 'contacts';
     displayName: 'contact';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String &
+    Name: Attribute.String &
       Attribute.Required &
       Attribute.SetMinMaxLength<{
         minLength: 2;
         maxLength: 20;
       }>;
+    Email: Attribute.Email;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
