@@ -19,7 +19,13 @@
       "minLength": 2
     },
     "Email": {
-      "type": "email"
+      "type": "email",
+      "required": true
+    },
+    "Message": {
+      "type": "text",
+      "required": true,
+      "minLength": 2
     }
   }
 }
